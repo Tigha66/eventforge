@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EventForge - Event Planning Assistant</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>.glass{background:rgba(255,255,255,0.05);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.1)}.gradient-text{background:linear-gradient(135deg,#a855f7,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent}</style>
+</head>
+<body class="bg-[#0a0a0f] min-h-screen text-white">
+  <header class="glass sticky top-0">
+    <div class="max-w-7xl mx-auto px-8 py-5 flex items-center justify-between">
+      <div class="flex items-center gap-4"><div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center shadow-lg"><i class="fas fa-calendar-day text-2xl"></i></div><div><h1 class="text-2xl font-bold gradient-text">EventForge</h1><p class="text-xs text-slate-400">Event Planning AI</p></div></div>
+    </div>
+  </header>
+  <main class="max-w-7xl mx-auto px-8 py-10">
+    <div class="grid grid-cols-4 gap-6 mb-10">
+      <div class="glass rounded-2xl p-6"><p class="text-slate-400 text-sm mb-2">Events</p><p class="text-4xl font-bold">8</p></div>
+      <div class="glass rounded-2xl p-6"><p class="text-slate-400 text-sm mb-2">Guests</p><p class="text-4xl font-bold">247</p></div>
+      <div class="glass rounded-2xl p-6"><p class="text-slate-400 text-sm mb-2">Vendors</p><p class="text-4xl font-bold text-purple-400">15</p></div>
+      <div class="glass rounded-2xl p-6"><p class="text-slate-400 text-sm mb-2">RSVPs</p><p class="text-4xl font-bold text-pink-400">89%</p></div>
+    </div>
+    <div class="grid lg:grid-cols-3 gap-8">
+      <div class="glass rounded-2xl p-8"><h2 class="text-xl font-bold mb-6"><i class="fas fa-magic text-purple-400 mr-3"></i>Plan Event</h2>
+        <div class="space-y-4"><input placeholder="Event name..." class="w-full bg-white/5 border border-white/10 rounded-xl p-4 text-white placeholder-slate-500"><input placeholder="Date..." class="w-full bg-white/5 border border-white/10 rounded-xl p-4 text-white placeholder-slate-500"><button class="w-full py-4 bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl font-semibold"><i class="fas fa-wand-magic-sparkles mr-2"></i>Generate Plan</button></div>
+      </div>
+      <div class="col-span-2 glass rounded-2xl p-8"><h2 class="text-xl font-bold mb class="fas fa-users text-pink-400 mr-3"></i>Upcoming Events</h2>
+        -6"><i<div class="space-y-3">
+          {[{name:'Annual Conference',date:'Mar 20',guests:150,rsvp:78},{name:'Product Launch',date:'Apr 5',guests:50,rsvp:45},{name:'Team Offsite',date:'Apr 12',guests:25,rsvp:20}].map(e=>`
+          <div class="bg-white/5 rounded-xl p-4 flex items-center justify-between"><div><p class="font-semibold text-lg">${e.name}</p><p class="text-slate-400 text-sm">${e.date} • ${e.guests} guests</p></div><div class="text-right"><p class="text-2xl font-bold text-pink-400">${e.rsvp}</p><p class="text-slate-400 text-xs">RSVP'd</p></div></div>
+          `).join('')}
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
